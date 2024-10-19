@@ -1,6 +1,6 @@
 import LeftPartTopHeader from "~/component/LeftPartTopHeader.js";
 
-const LeftPart = ({ children }) => {
+const LeftPart = () => {
   return <LeftPartTopHeader />;
 };
 
