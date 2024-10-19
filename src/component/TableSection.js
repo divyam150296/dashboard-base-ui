@@ -6,14 +6,14 @@ const TableSection = () => {
   const totalRowLength = Sample?.table_data?.length;
   const formatDateToDDMMYY = (date) => {
     if (!(date instanceof Date)) {
-      date = new Date(date); // Convert to Date object if it's a string or timestamp
+      date = new Date(date);
     }
 
-    const day = String(date.getDate()).padStart(2, "0"); // Get day and pad with leading zero
-    const month = String(date.getMonth() + 1).padStart(2, "0"); // Get month (0-based) and pad
-    const year = String(date.getFullYear()).slice(-2); // Get last two digits of year
+    const day = String(date.getDate()).padStart(2, "0");
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const year = String(date.getFullYear()).slice(-2);
 
-    return `${day}/${month}/${year}`; // Format as ddmmyy
+    return `${day}/${month}/${year}`;
   };
   return (
     <Fragment>
@@ -34,41 +34,6 @@ const TableSection = () => {
         </div>
         <div>Rows: {totalRowLength}</div>
       </div>
-      {/* <div className="table-section no-border-top">
-        <table>
-          <thead>
-            <tr>
-              <th>
-                Column 1 <span>Dustbin</span>
-              </th>
-              <th>Column 2</th>
-              <th>Column 3</th>
-            </tr>
-            <tr>
-              <th>
-                <select name="pets" id="pet-select">
-                  <option value="">--Please choose an option--</option>
-                  <option value="dog">Dog</option>
-                  <option value="cat">Cat</option>
-                  <option value="hamster">Hamster</option>
-                  <option value="parrot">Parrot</option>
-                  <option value="spider">Spider</option>
-                  <option value="goldfish">Goldfish</option>
-                </select>
-              </th>
-              <th>Column 2</th>
-              <th>Column 3</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Data 1</td>
-              <td>Data 2</td>
-              <td>Data 3</td>
-            </tr>
-          </tbody>
-        </table>
-      </div> */}
       <div className="table-section">
         <SelectionTable />
       </div>

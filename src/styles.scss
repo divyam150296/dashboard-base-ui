@@ -76,7 +76,7 @@ th, td {
 
 th {
   background-color: rgb(206, 214, 250);
-  cursor: col-resize; /* Cursor changes to resize when hovering over headers */
+  cursor: col-resize; 
 }
 
 .selection-row-background {
@@ -98,8 +98,8 @@ th {
 
 .detailed-section {
   width: 100%;
-  max-width: 14vw; /* Adjust as needed */
-  overflow-x: auto; /* Enable horizontal scrolling */
+  max-width: 14vw; 
+  overflow-x: auto;
   overflow-y: hidden;
 
   &--title {
